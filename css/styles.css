@@ -1,0 +1,661 @@
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Variables */
+:root {
+    --main-black: #0d0d0d;
+    --main-gray: #f6f3e0;
+    --main-white: #ffffff;
+    --main-yellow: #d49329;
+    --main-red: #ca3830;
+    --main-test: blue;
+    --main-green: #78783f;
+}
+
+/* Import Fonts */
+@font-face {
+    font-family: BonVivant;
+    src: url(../BonVivant-SerifBold.otf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: MontserratSemiBold;
+    src: url(../Montserrat-SemiBold.ttf);
+}
+
+/* START BASE STYLES */
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 100em) {
+    html {
+        font-size: 45%;
+    }
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 30%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 25%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 20%;
+    }
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+    background-color: var(--main-black);
+}
+
+a {
+    font-size: 1.8rem;
+}
+
+h1,
+h2 {
+    font-family: BonVivant;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem !important;
+    color: var(--main-white);
+    line-height: 4rem !important;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem !important;
+    color: var(--main-white);
+    line-height: 4rem !important;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.4rem;
+    color: var(--main-yellow);
+}
+
+.cover-image {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Base styles: Button */
+.btn-rie-main a {
+    font-weight: bold;
+    padding: 1rem 2rem;
+}
+.btn-rie {
+    background: var(--main-gray) !important;
+    color: var(--main-black);
+    text-transform: uppercase;
+}
+
+.btn-rie:hover {
+    background-color: var(--main-yellow) !important;
+}
+
+/* Base styles: Separate */
+.separate {
+    background-color: var(--main-black);
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.separate-image {
+    width: 9rem;
+    height: 9rem;
+    margin: auto;
+}
+
+.separate-tear {
+    background-image: url("../images/tear.png");
+}
+
+.separate-snake {
+    background-image: url("../images/snake.png");
+}
+
+.separate-star {
+    background-image: url("../images/star.png");
+}
+
+.separate-rose {
+    background-image: url("../images/rose.png");
+}
+
+/* END BASE STYLES */
+
+/* Navbar */
+#navbar {
+    background-color: var(--main-black);
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+#navbar a:hover {
+    color: var(--main-yellow);
+}
+
+#navbar-brand {
+    background-image: url("../images/logo_nav.png");
+    width: 16.5rem;
+    height: 2.8rem;
+}
+
+/* Home Section */
+.home-section-main {
+    position: relative;
+}
+
+.home-section-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 20%;
+    margin: auto;
+}
+
+.home-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-section-image {
+    background-image: url("../images/heading_home.png");
+    width: 100%;
+    height: 38vw;
+    margin-top: 6.5rem;
+}
+
+/* About Me Section */
+.about-me-section {
+    background-color: var(--main-black);
+    padding: 10rem 0;
+}
+
+.about-me-section-image {
+    background-image: url("../images/logo.png");
+    width: 50.8rem;
+    height: 67.7rem;
+}
+
+.about-me-section-content {
+    margin: 28.6rem 5rem;
+}
+
+.about-me-section-text {
+    margin-bottom: 3rem;
+}
+
+.about-me-section-main {
+    display: flex;
+}
+
+/* Works section */
+
+.works-section-main {
+    background-color: var(--main-black);
+    padding: 10rem 0;
+}
+
+.project {
+    width: 100%;
+}
+
+.projects-pair {
+    padding-bottom: 5rem;
+}
+
+.project-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.project-text p {
+    color: (var(--main-white));
+}
+
+.project-btn {
+    margin-top: 60rem;
+}
+
+.project-img {
+    width: 100%;
+    height: 80rem;
+}
+
+.project-semireal-img {
+    background-image: url("../images/semireal.png");
+}
+
+.project-chibi-img {
+    background-image: url("../images/chibi.png");
+}
+
+.project-oc-img {
+    background-image: url("../images/concept.png");
+}
+
+.project-ui-ux-img {
+    background-image: url("../images/uiux.png");
+}
+
+/* Contact section */
+.contact-section {
+    background-color: var(--main-black);
+}
+
+.contact-section-content {
+    margin-top: 10rem;
+}
+
+.contact-section-content h3 {
+    color: var(--main-yellow);
+}
+
+.contact-section-image {
+    background-image: url("../images/logo_small.png");
+    width: 27.2rem;
+    height: 36.3rem;
+}
+
+/* Work Base Styles */
+.work-page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--main-black);
+    padding-bottom: 10rem;
+}
+
+.work-page-footer a {
+    color: var(--main-gray);
+}
+
+.work-page-footer a:hover {
+    color: var(--main-yellow);
+}
+
+.work-page-link-active {
+    color: var(--main-yellow) !important;
+    pointer-events: none;
+}
+
+.work-page-heading-text {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25rem;
+}
+
+.work-page-heading-text p {
+    color: var(--main-white);
+    font-size: 2rem;
+}
+
+/* Work: Semireal */
+.semireal-heading-image {
+    background-image: url("../images/heading_semi.png");
+    width: 100%;
+    height: 38vw;
+    margin-top: 6.5rem;
+    border: solid 2rem var(--main-black);
+}
+
+.semireal-show {
+    background-color: var(--main-black);
+}
+
+.semireal-i {
+    border: solid 2rem var(--main-black);
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.semireal-i-1 {
+    background-image: url("../images/knightsoftheroundtable.png");
+    width: 100%;
+    height: 93.4vw;
+}
+
+.semireal-i-2 {
+    background-image: url("../images/therestraintsoftheroundtable.png");
+    width: 100%;
+    height: 41.1vw;
+}
+
+.semireal-i-3 {
+    background-image: url("../images/iwontallowyoutocry.png");
+    width: 100%;
+    height: 78.1vw;
+}
+
+.semireal-i-4 {
+    background-image: url("../images/saria.png");
+    width: 100%;
+    height: 36vw;
+}
+
+.semireal-i-5 {
+    background-image: url("../images/mostima.png");
+    width: 100%;
+    height: 30.8vw;
+}
+
+.semireal-i-6 {
+    background-image: url("../images/siege.png");
+    width: 100%;
+    height: 31.8vw;
+}
+
+/* Work: Chibi */
+.chibi-heading-image {
+    background-image: url("../images/heading_chibi.png");
+    width: 100%;
+    height: 38vw;
+    margin-top: 6.5rem;
+    border: solid 2rem var(--main-black);
+}
+
+.chibi-show {
+    background-color: var(--main-black);
+}
+
+.chibi-i {
+    border: solid 2rem var(--main-black);
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.chibi-i-1 {
+    background-image: url("../images/chibi1.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-2 {
+    background-image: url("../images/chibi2.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-3 {
+    background-image: url("../images/chibi3.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-4 {
+    background-image: url("../images/chibi4.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-5 {
+    background-image: url("../images/chibi5.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-6 {
+    background-image: url("../images/chibi6.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-7 {
+    background-image: url("../images/chibi7.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.chibi-i-8 {
+    background-image: url("../images/chibi8.png");
+    width: 100%;
+    height: 50vw;
+}
+
+/* Work: Character */
+.character-heading-image {
+    background-image: url("../images/heading_character.png");
+    width: 100%;
+    height: 38vw;
+    margin-top: 6.5rem;
+    border: solid 2rem var(--main-black);
+}
+
+.character-heading-text p {
+    color: var(--main-green) !important;
+}
+
+.character-heading-text h1 {
+    color: var(--main-green) !important;
+}
+
+.character-show {
+    background-color: var(--main-black);
+}
+
+.character-i {
+    border: solid 2rem var(--main-black);
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.character-i-1 {
+    background-image: url("../images/forest.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.character-i-2 {
+    background-image: url("../images/unknown.png");
+    width: 100%;
+    height: 50vw;
+}
+
+.character-i-3 {
+    background-image: url("../images/EU.png");
+    width: 100%;
+    height: 76.8vw;
+}
+
+.character-i-4 {
+    background-image: url("../images/shirt_1.png");
+    width: 100%;
+    height: 39vw;
+}
+
+.character-i-5 {
+    background-image: url("../images/shirt_2.png");
+    width: 100%;
+    height: 39vw;
+}
+
+/* Work: UI/UX */
+.ui-ux-heading-image {
+    background-image: url("../images/heading_uiux.png");
+    width: 100%;
+    height: 38vw;
+    margin-top: 6.5rem;
+    border: solid 2rem var(--main-black);
+}
+
+.ui-ux-heading-text p {
+    color: var(--main-red) !important;
+}
+
+.ui-ux-heading-text h1 {
+    color: var(--main-red) !important;
+}
+
+.ui-ux-show {
+    background-color: var(--main-black);
+}
+
+.ui-ux-i {
+    margin-bottom: 25rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ui-ux-i-1 {
+    background-image: url("../images/uiux_4.png");
+    width: 100%;
+    height: 85vw;
+}
+
+.ui-ux-i-2 {
+    background-image: url("../images/uiux_3.png");
+    width: 100%;
+    height: 85vw;
+}
+
+.ui-ux-i-3 {
+    background-image: url("../images/uiux_5.png");
+    width: 100%;
+    height: 85vw;
+}
+
+.ui-ux-i-4 {
+    background-image: url("../images/uiux_1.png");
+    width: 100%;
+    height: 85vw;
+}
+
+.ui-ux-i-5 {
+    background-image: url("../images/uiux_2.png");
+    width: 100%;
+    height: 85vw;
+}
+
+.ui-ux-i-6 {
+    background-image: url("../images/uiux_6.png");
+    width: 100%;
+    height: 85vw;
+}
+.ui-ux-i-7 {
+    background-image: url("../images/uiux_7.png");
+    width: 100%;
+    height: 85vw;
+}
+.ui-ux-i-6 {
+    background-image: url("../images/uiux_8.png");
+    width: 100%;
+    height: 85vw;
+}
+
+/* About me Page */
+.about-me-page-show {
+    background-color: var(--main-black);
+}
+
+.about-me-page-main {
+    margin-top: 7.5rem;
+    padding: 15rem 0;
+}
+
+.about-me-page-image-main {
+    background-image: url("../images/logo_small.png");
+    width: 27.2rem;
+    height: 36.3rem;
+}
+
+.about-me-page-content-main {
+    margin-top: 15rem;
+}
+
+.about-me-page-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-page-text h3 {
+    color: var(--main-yellow);
+}
+
+.about-me-page-image-softwares {
+    background-image: url("../images/tear.png");
+    width: 19.4rem;
+    height: 19.5rem;
+    margin-left: 4rem;
+}
+
+.about-me-page-image-working {
+    background-image: url("../images/rose.png");
+    width: 19.4rem;
+    height: 19.5rem;
+    margin-left: 4rem;
+    margin-top: 6rem;
+}
+
+.about-me-page-image-education {
+    background-image: url("../images/snake.png");
+    width: 19.4rem;
+    height: 19.5rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+}
+
+.about-me-page-image-contact {
+    background-image: url("../images/star.png");
+    width: 19.4rem;
+    height: 19.5rem;
+    margin-left: 4rem;
+    margin-top: 11rem;
+}
+
